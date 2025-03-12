@@ -1,5 +1,5 @@
 import { asyncHandler } from "../Middleware/asyncHandler.js";
-import { Room } from "../models/room.model.js";
+import { Room } from "../Models/room.model.js";
 import { Booking } from "../Models/booking.model.js";
 import mongoose from "mongoose";
 import { Hotel } from "../Models/hotel.model.js";

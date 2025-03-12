@@ -11,8 +11,9 @@ import cookieParser from "cookie-parser";
 import cors from "cors"
 import path from "path"
 const app = express();
-const _dirname =path.resolve()
 
+// production 
+const _dirname =path.resolve()
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -20,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"http://localhost:5173",
+    origin:"https://hms-prod.onrender.com",
     credentials:true
 }))
 
@@ -42,13 +43,16 @@ app.use("/api/v1/admin",adminRouter)
 // admin Routes 
 app.use("/api/v1/rating",ratingRouter)
 
-
 // production 
 app.use(express.static(path.join(_dirname,"/frontend/dist")))
 app.get("*",(_,res)=>{
     res.sendFile(path.join(_dirname, "frontend","dist","index.html"))
 
 })
+
+
+
+
 
 
 connectToDb()

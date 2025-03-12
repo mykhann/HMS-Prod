@@ -1,9 +1,9 @@
 import { asyncHandler } from "../Middleware/asyncHandler.js";
-import { uploadOnCloudinary } from "../Middleware/utils/cloudinary.js";
+import { uploadOnCloudinary } from "../Middleware/utils/Cloudinary.js";
 import { Hotel } from "../Models/hotel.model.js";
 import mongoose from "mongoose";
 import { User } from "../Models/user.model.js";
-import { Room } from "../models/room.model.js";
+import { Room } from "../Models/room.model.js";
 import bcrypt from "bcrypt"
 
 const createHotel = asyncHandler(async (req, res) => {
