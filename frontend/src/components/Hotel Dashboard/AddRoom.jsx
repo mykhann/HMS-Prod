@@ -145,7 +145,7 @@ const AddRoom = () => {
 
             {/* Room Price */}
             <div className="">
-              <label htmlFor="price" className="block text-sm  font-medium text-black">
+              <label htmlFor="price" className="block text-sm  font-medium text-gray-300">
                 Price per Night ($)
               </label>
               <input
@@ -154,7 +154,7 @@ const AddRoom = () => {
                 name="price"
                 value={roomData.price}
                 onChange={handleInputChange}
-                className="mt-1 block w-full p-2 bg-[#0f1d44]border border-yellow-600 rounded-md text-white"
+                className="mt-1 block w-full p-2 bg-[#0f1d44] border border-yellow-600 rounded-md text-white"
                 required
               />
             </div>
