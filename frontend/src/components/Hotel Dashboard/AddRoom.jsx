@@ -145,7 +145,7 @@ const AddRoom = () => {
 
             {/* Room Price */}
             <div className="">
-              <label htmlFor="price" className="block text-sm  font-medium text-gray-300">
+              <label htmlFor="price" className="block text-sm  font-medium text-black">
                 Price per Night ($)
               </label>
               <input
