@@ -19,6 +19,7 @@
     "axios": "^1.7.7",
     "chart.js": "^4.4.4",
     "heroicons": "^2.1.5",
+    "hotel-management-web-app-prod": "file:..",
     "jsonwebtoken": "^9.0.2",
     "lucide-react": "^0.446.0",
     "moment": "^2.30.1",

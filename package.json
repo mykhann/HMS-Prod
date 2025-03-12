@@ -1,4 +1,6 @@
 {
+  "name": "hotel-management-web-app-prod",
+  "version": "1.0.0",
   "type": "module",
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -13,7 +15,8 @@
     "multer-storage-cloudinary": "^4.0.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node backend/index.js",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+    "dev": "nodemon backend/index.js"
   }
 }

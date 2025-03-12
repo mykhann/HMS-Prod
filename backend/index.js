@@ -9,7 +9,10 @@ import adminRouter from "./src/routes/admin.routes.js"
 import ratingRouter from "./src/routes/rating.routes.js"
 import cookieParser from "cookie-parser";
 import cors from "cors"
+import path from "path"
 const app = express();
+const _dirname =path.resolve()
+
 
 app.use(express.json());
 app.use(express.urlencoded());
@@ -40,7 +43,12 @@ app.use("/api/v1/admin",adminRouter)
 app.use("/api/v1/rating",ratingRouter)
 
 
+// production 
+app.use(express.static(path.join(_dirname,"/frontend/dist")))
+app.get("*",(_,res)=>{
+    res.sendFile(path.join(_dirname, "frontend","dist","index.html"))
 
+})
 
 
 connectToDb()
