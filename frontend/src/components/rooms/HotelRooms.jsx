@@ -25,7 +25,7 @@ const HotelRooms = () => {
     const fetchRooms = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5500/api/v1/room/get/${hotelId}`
+          `https://hms-prod.onrender.com/api/v1/room/get/${hotelId}`
         );
         const data = await response.json();
         dispatch(setSingleHotelRoom(data.rooms));

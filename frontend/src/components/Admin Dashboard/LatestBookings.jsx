@@ -10,7 +10,7 @@ const LatestBookings = () => {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get("http://localhost:5500/api/v1/admin/bookings", {
+        const response = await axios.get("https://hms-prod.onrender.com/api/v1/admin/bookings", {
           withCredentials: true, 
         });
 

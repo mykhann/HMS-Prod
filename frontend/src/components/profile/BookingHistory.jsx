@@ -17,7 +17,7 @@ const BookingHistory = () => {
     const fetchBookingHistory = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:5500/api/v1/booking/get",
+          "https://hms-prod.onrender.com/api/v1/booking/get",
           {
             withCredentials: true,
           }
@@ -36,7 +36,7 @@ const BookingHistory = () => {
   const cancelBooking = async (bookingId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5500/api/v1/booking/cancel-booking/${bookingId}`,
+        `https://hms-prod.onrender.com/api/v1/booking/cancel-booking/${bookingId}`,
         { withCredentials: true }
       );
 

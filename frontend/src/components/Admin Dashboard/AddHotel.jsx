@@ -61,7 +61,7 @@ const AddHotel = () => {
 
     try {
       const res = await axios.post(
-        "http://localhost:5500/api/v1/hotel/create",
+        "https://hms-prod.onrender.com/api/v1/hotel/create",
         formData,
         {
           withCredentials: true,

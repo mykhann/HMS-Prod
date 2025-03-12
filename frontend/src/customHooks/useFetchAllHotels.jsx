@@ -10,7 +10,7 @@ const useFetchAllHotels = () => {
   useEffect(() => {
     const fetchHotels = async () => {   
       try {
-        const res = await axios.get('http://localhost:5500/api/v1/hotel/get/hotels');
+        const res = await axios.get('https://hms-prod.onrender.com/api/v1/hotel/get/hotels');
         if (res.data.success) {
           dispatch(setHotels(res.data.hotels));  
         }

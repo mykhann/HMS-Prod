@@ -11,7 +11,7 @@ const useHotelData = () => {
   useEffect(() => {
     const fetchHotelInfo = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5500/api/v1/hotel/my-hotel", {
+        const { data } = await axios.get("https://hms-prod.onrender.com/api/v1/hotel/my-hotel", {
           withCredentials: true,
         });
         setHotel(data.hotel);

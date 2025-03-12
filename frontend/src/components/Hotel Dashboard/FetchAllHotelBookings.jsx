@@ -96,7 +96,7 @@ const BookingCard = ({ booking, cancelBooking }) => {
   const handleStatusChange = async (status) => {
     try {
       const response = await axios.put(
-        `http://localhost:5500/api/v1/booking/update-booking/${booking._id}`,
+        `https://hms-prod.onrender.com/api/v1/booking/update-booking/${booking._id}`,
         { status },
         { withCredentials: true }
       );

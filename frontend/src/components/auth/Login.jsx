@@ -21,7 +21,7 @@ const Login = () => {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5500/api/v1/user/login", input, { withCredentials: true });
+      const res = await axios.post("https://hms-prod.onrender.com/api/v1/user/login", input, { withCredentials: true });
   
       if (res.data.success) {
         toast.success(res.data.message);

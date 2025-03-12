@@ -24,7 +24,7 @@ const BookRoom = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5500/api/v1/booking/${roomId}`,
+        `https://hms-prod.onrender.com/api/v1/booking/${roomId}`,
         bookingData,
         {
           withCredentials: true,

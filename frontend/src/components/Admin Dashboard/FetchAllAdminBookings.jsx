@@ -14,7 +14,7 @@ const FetchAllAdminBookings = () => {
   useEffect(() => {
     const fetchBookingHistory = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5500/api/v1/admin/bookings", {
+        const { data } = await axios.get("https://hms-prod.onrender.com/api/v1/admin/bookings", {
           withCredentials: true,
         });
         setBookings(data.bookings);
@@ -31,7 +31,7 @@ const FetchAllAdminBookings = () => {
   const cancelBooking = async (bookingId) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5500/api/v1/booking/cancel-booking/${bookingId}`,
+        `https://hms-prod.onrender.com/api/v1/booking/cancel-booking/${bookingId}`,
         { withCredentials: true }
       );
 

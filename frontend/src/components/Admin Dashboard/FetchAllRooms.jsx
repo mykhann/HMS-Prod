@@ -17,7 +17,7 @@ const AllRooms = () => {
 
   const fetchAllRooms = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5500/api/v1/admin/rooms", {
+      const { data } = await axios.get("https://hms-prod.onrender.com/api/v1/admin/rooms", {
         withCredentials: true,
       });
       setRooms(data.rooms);
@@ -32,7 +32,7 @@ const AllRooms = () => {
     if (!window.confirm("Are you sure you want to delete this room?")) return;
 
     try {
-      await axios.delete(`http://localhost:5500/api/v1/room/delete/${roomId}`, {
+      await axios.delete(`https://hms-prod.onrender.com/api/v1/room/delete/${roomId}`, {
         withCredentials: true,
       });
       toast.success("Room deleted successfully");

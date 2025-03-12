@@ -79,7 +79,7 @@ const AddRoom = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5500/api/v1/room/add",
+        "https://hms-prod.onrender.com/api/v1/room/add",
         formData,
         {
           withCredentials: true,

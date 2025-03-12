@@ -31,10 +31,9 @@ const HotelList = () => {
       try {
        
         const response = await axios.get(
-          "http://localhost:5500/api/v1/booking/get",
+          "https://hms-prod.onrender.com/api/v1/booking/get",
           { withCredentials: true }
         );
-        console.log("[DEBUG] Bookings fetched:", response.data.bookings);
         setBookings(response.data.bookings);
       } catch (error) {
         console.error("[ERROR] Fetching bookings:", error);
@@ -49,9 +48,8 @@ const HotelList = () => {
   // Handle rating submission
   const handleRating = async (hotelId, rating) => {
     try {
-      console.log("[DEBUG] Submitting rating for hotel:", hotelId);
       const response = await axios.post(
-        `http://localhost:5500/api/v1/rating/${hotelId}/rate`,
+        `https://hms-prod.onrender.com/api/v1/rating/${hotelId}/rate`,
         { rating },
         { withCredentials: true }
       );
@@ -97,9 +95,8 @@ const HotelList = () => {
 
   const handleDelete = async (hotelId) => {
     try {
-      console.log("[DEBUG] Deleting hotel:", hotelId);
       const response = await axios.delete(
-        `http://localhost:5500/api/v1/hotel/delete/${hotelId}`,
+        `https://hms-prod.onrender.com/api/v1/hotel/delete/${hotelId}`,
         { withCredentials: true }
       );
 

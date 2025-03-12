@@ -14,7 +14,7 @@ const HotelInfoCard = () => {
   useEffect(() => {
     const fetchHotelInfo = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5500/api/v1/hotel/my-hotel", { withCredentials: true });
+        const { data } = await axios.get("https://hms-prod.onrender.com/api/v1/hotel/my-hotel", { withCredentials: true });
         setHotel(data.hotel);
         setFormData({
           name: data.hotel.name || "",
@@ -51,7 +51,7 @@ const HotelInfoCard = () => {
     });
 
     try {
-      const { data } = await axios.put("http://localhost:5500/api/v1/hotel/update", formDataToSend, {
+      const { data } = await axios.put("https://hms-prod.onrender.com/api/v1/hotel/update", formDataToSend, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       });

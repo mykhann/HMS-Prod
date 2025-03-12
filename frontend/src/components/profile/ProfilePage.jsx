@@ -36,7 +36,7 @@ const ProfilePage = () => {
     e.preventDefault();
     try {
       const { data } = await axios.put(
-        "http://localhost:5500/api/v1/user/Update-Profile",
+        "https://hms-prod.onrender.com/api/v1/user/Update-Profile",
         formData,
         {
           headers: {

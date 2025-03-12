@@ -18,7 +18,7 @@ const FetchAllUsers = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get("http://localhost:5500/api/v1/admin/users", {
+        const response = await axios.get("https://hms-prod.onrender.com/api/v1/admin/users", {
           withCredentials: true,
         });
         console.log("API Response:", response.data);

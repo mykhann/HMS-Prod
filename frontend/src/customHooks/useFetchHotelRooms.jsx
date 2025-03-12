@@ -10,7 +10,7 @@ export const useFetchHotelRooms = (hotelId) => {
 
         const fetchRooms = async () => {
             try {
-                const response = await fetch(`http://localhost:5500/api/v1/room/get/${hotelId}`);
+                const response = await fetch(`https://hms-prod.onrender.com/api/v1/room/get/${hotelId}`);
                 if (!response.ok) throw new Error("Failed to fetch");
                 const data = await response.json();
                 setRooms(data);
